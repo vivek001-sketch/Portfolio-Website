@@ -2,48 +2,32 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Vivek • Product Designer</title>
-  <!-- Tailwind CSS CDN -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Vivek • Portfolio</title>
+
+  <!-- Tailwind CSS -->
   <script src="https://cdn.tailwindcss.com"></script>
   <!-- Lucide Icons -->
   <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
+
   <style>
-    /* Smooth fade-up animation */
-    .fade-up {
-      opacity: 0;
-      transform: translateY(12px);
-      transition: opacity 0.4s ease, transform 0.4s ease;
-    }
-    .fade-up.show {
-      opacity: 1;
-      transform: translateY(0);
-    }
+    .fade-up{opacity:0;transform:translateY(16px);transition:opacity .45s ease,transform .45s ease}
+    .fade-up.show{opacity:1;transform:translateY(0)}
   </style>
 </head>
-<body class="min-h-screen bg-zinc-950 text-zinc-100 selection:bg-indigo-500/30">
+<body class="min-h-screen bg-gradient-to-br from-fuchsia-500 via-purple-500 to-teal-500/70 text-zinc-900 antialiased selection:bg-fuchsia-300/40">
 
-  <!-- Gradient Background -->
-  <div aria-hidden class="pointer-events-none fixed inset-0 -z-10 overflow-hidden">
-    <div class="absolute -top-40 -left-24 h-96 w-96 rounded-full bg-indigo-500/20 blur-3xl"></div>
-    <div class="absolute top-1/2 -right-20 h-96 w-96 rounded-full bg-fuchsia-500/20 blur-3xl"></div>
-    <div class="absolute bottom-0 left-1/3 h-96 w-96 rounded-full bg-cyan-500/10 blur-3xl"></div>
-  </div>
-
-  <!-- Header -->
-  <header class="sticky top-0 z-40 border-b border-white/10 backdrop-blur bg-zinc-950/70">
+  <!-- Navbar -->
+  <header class="sticky top-0 z-40 bg-white/60 backdrop-blur border-b border-white/40">
     <div class="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8 h-14 flex items-center justify-between">
-      <a href="#home" class="font-semibold tracking-tight flex items-center gap-2">
-        <span class="inline-flex h-6 w-6 items-center justify-center rounded-lg bg-gradient-to-tr from-indigo-500 via-fuchsia-500 to-cyan-500"></span>
-        <span>Vivek • Product Designer</span>
-      </a>
-      <nav class="hidden sm:flex items-center gap-6 text-sm">
-        <a class="hover:text-indigo-300" href="#projects">Work</a>
-        <a class="hover:text-indigo-300" href="#experience">Experience</a>
-        <a class="hover:text-indigo-300" href="#contact">Contact</a>
-        <a id="resumeBtn" href="#" class="inline-flex items-center gap-2 rounded-full border px-3 py-1.5 hover:bg-zinc-900">
-          <i data-lucide="download" class="h-4 w-4"></i> Resume
-        </a>
+      <a href="#home" class="font-semibold tracking-tight">Vivek</a>
+      <nav class="hidden md:flex items-center gap-6 text-sm">
+        <a class="hover:text-fuchsia-700" href="#home">Home</a>
+        <a class="hover:text-fuchsia-700" href="#about">About</a>
+        <a class="hover:text-fuchsia-700" href="#skills">Skills</a>
+        <a class="hover:text-fuchsia-700" href="#services">Services</a>
+        <a class="hover:text-fuchsia-700" href="#projects">Projects</a>
+        <a class="hover:text-fuchsia-700" href="#contact">Contact</a>
       </nav>
     </div>
   </header>
@@ -51,198 +35,353 @@
   <main class="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
 
     <!-- Hero -->
-    <section id="home" class="py-20 sm:py-28">
-      <div class="grid lg:grid-cols-2 gap-8 items-center">
-        <div>
-          <h1 class="text-4xl sm:text-5xl lg:text-6xl font-semibold tracking-tight fade-up">
-            Designing products that feel <span class="text-transparent bg-clip-text bg-gradient-to-r from-indigo-400 via-fuchsia-400 to-cyan-400">effortless</span> and <span class="underline decoration-indigo-400/60">delightful</span>
-          </h1>
-          <p class="mt-4 text-lg text-zinc-300/80 max-w-xl">
-            I’m Vivek, a product/UX designer who blends research, interaction design, and visual craft to ship outcomes — not just wireframes.
-          </p>
-          <div class="mt-6 flex flex-wrap items-center gap-3">
-            <a href="#projects" class="inline-flex items-center gap-2 rounded-full bg-white text-zinc-900 px-4 py-2 font-medium">
-              See my work <i data-lucide="arrow-up-right" class="h-4 w-4"></i>
-            </a>
-            <a href="#contact" class="inline-flex items-center gap-2 rounded-full border px-4 py-2">
-              Let’s collaborate <i data-lucide="sparkles" class="h-4 w-4"></i>
-            </a>
-          </div>
-          <div class="mt-6 flex items-center gap-4">
-            <a href="https://github.com/" target="_blank" class="opacity-80 hover:opacity-100"><i data-lucide="github"></i></a>
-            <a href="https://linkedin.com/" target="_blank" class="opacity-80 hover:opacity-100"><i data-lucide="linkedin"></i></a>
-            <a href="mailto:hello@example.com" class="opacity-80 hover:opacity-100"><i data-lucide="mail"></i></a>
-          </div>
+    <section id="home" class="py-28 text-center">
+      <div class="mx-auto max-w-3xl fade-up">
+        <div class="mx-auto h-24 w-24 rounded-full ring-4 ring-white/60 overflow-hidden shadow-lg">
+          <!-- Replace with your photo -->
+          <img src="https://i.pravatar.cc/300?img=12" alt="Vivek" class="h-full w-full object-cover"/>
         </div>
-        <div class="relative h-64 sm:h-80 lg:h-96 rounded-3xl overflow-hidden ring-1 ring-white/10 fade-up">
-          <div class="absolute inset-0 bg-gradient-to-tr from-indigo-500/20 via-fuchsia-500/20 to-cyan-500/20"></div>
-          <img alt="Hero mock" src="https://images.unsplash.com/photo-1555066931-4365d14bab8c?q=80&w=1200&auto=format&fit=crop" class="h-full w-full object-cover" />
+
+        <h1 class="mt-6 text-4xl sm:text-5xl font-extrabold tracking-tight text-white drop-shadow">
+          Vivek Chaurasia
+        </h1>
+        <p class="mt-4 text-lg text-white/90">
+          Exploring Technology through <span class="font-semibold">Code, Design & Cloud</span>
+        </p>
+
+        <div class="mt-8">
+          <a href="#projects"
+             class="inline-flex items-center gap-2 rounded-xl bg-white/90 text-zinc-900 px-5 py-2.5 font-medium shadow ring-1 ring-black/5 hover:bg-white">
+            View My Work <i data-lucide="mouse" class="h-4 w-4"></i>
+          </a>
         </div>
       </div>
     </section>
 
     <!-- About -->
-    <section class="py-8">
-      <div class="rounded-2xl bg-zinc-900/50 ring-1 ring-white/10 p-6 md:p-8 fade-up">
-        <h2 class="text-xl sm:text-2xl font-semibold tracking-tight">About</h2>
-        <p class="mt-3 text-zinc-300/80">
-          I craft intuitive experiences through rapid prototyping, usability testing, and thoughtful UI systems. Previously interned on IBM AI & Cloud technology, collaborating with engineers to ship accessible, performant interfaces.
+    <section id="about" class="py-16">
+      <h2 class="text-3xl font-bold text-center">About Me</h2>
+      <div class="mx-auto mt-3 h-1 w-16 rounded bg-fuchsia-500"></div>
+
+      <div class="mt-8 rounded-2xl bg-white/80 backdrop-blur ring-1 ring-black/5 p-6 md:p-8 fade-up">
+        <p class="text-zinc-700">
+          I'm <span class="font-semibold">Vivek Chaurasia</span>, currently pursuing
+          <span class="font-semibold">B.Tech in Computer Science & Engineering</span> from Cooch
+          Behar Government Engineering College. Passionate about Python programming, UI/UX design,
+          and cloud technologies, I am eager to apply my knowledge to real-world challenges.
         </p>
+
+        <!-- Education Timeline -->
+        <h3 class="mt-8 text-xl font-semibold">Education Timeline</h3>
+        <div class="mt-4 grid gap-4">
+          <div class="rounded-xl bg-white ring-1 ring-zinc-200 p-4 flex items-start justify-between">
+            <div>
+              <div class="text-xs font-semibold inline-flex px-2 py-0.5 rounded-full bg-fuchsia-100 text-fuchsia-700">2024–2027</div>
+              <p class="mt-2 font-semibold">B.Tech in Computer Science & Engineering</p>
+              <p class="text-sm text-zinc-600">Cooch Behar Government Engineering College (MAKAUT)</p>
+            </div>
+            <div class="text-sm font-medium text-green-700 bg-green-100 px-3 py-1 rounded-full">Currently in 3rd Year</div>
+          </div>
+
+          <div class="rounded-xl bg-white ring-1 ring-zinc-200 p-4 flex items-start justify-between">
+            <div>
+              <div class="text-xs font-semibold inline-flex px-2 py-0.5 rounded-full bg-violet-100 text-violet-700">2023</div>
+              <p class="mt-2 font-semibold">Diploma in Electronics & Telecommunications Engineering</p>
+              <p class="text-sm text-zinc-600">Mathabhanga Govt Polytechnic</p>
+            </div>
+            <div class="text-sm font-medium text-indigo-700 bg-indigo-100 px-3 py-1 rounded-full">82.5%</div>
+          </div>
+        </div>
       </div>
     </section>
 
     <!-- Skills -->
-    <section class="py-8">
-      <div class="rounded-2xl bg-zinc-900/50 ring-1 ring-white/10 p-6 md:p-8 fade-up">
-        <h2 class="text-xl sm:text-2xl font-semibold tracking-tight">Skills</h2>
-        <div class="mt-4 flex flex-wrap gap-2">
-          <span class="text-sm rounded-full bg-zinc-900/80 ring-1 ring-white/10 px-3 py-1">User Research</span>
-          <span class="text-sm rounded-full bg-zinc-900/80 ring-1 ring-white/10 px-3 py-1">Wireframing</span>
-          <span class="text-sm rounded-full bg-zinc-900/80 ring-1 ring-white/10 px-3 py-1">Prototyping</span>
-          <!-- ... repeat for all skills -->
+    <section id="skills" class="py-16">
+      <h2 class="text-3xl font-bold text-center">My Skills</h2>
+      <div class="mx-auto mt-3 h-1 w-16 rounded bg-fuchsia-500"></div>
+      <p class="mt-3 text-center text-zinc-700">
+        Passionate about technology with expertise across development, design, and cloud platforms
+      </p>
+
+      <div class="mt-8 grid grid-cols-1 md:grid-cols-3 gap-6">
+        <!-- Python -->
+        <div class="rounded-2xl bg-white/90 ring-1 ring-black/5 p-6 fade-up">
+          <div class="h-10 w-10 rounded-full grid place-content-center bg-fuchsia-100 ring-1 ring-fuchsia-200">
+            <i data-lucide="chevrons-left-right" class="h-5 w-5 text-fuchsia-700"></i>
+          </div>
+          <h3 class="mt-4 font-semibold">Python Programming</h3>
+          <p class="mt-2 text-sm text-zinc-600">
+            Strong programming skills in Python with experience in data structures, algorithms, and software development.
+          </p>
+        </div>
+
+        <!-- UI/UX -->
+        <div class="rounded-2xl bg-white/90 ring-1 ring-black/5 p-6 fade-up">
+          <div class="h-10 w-10 rounded-full grid place-content-center bg-emerald-100 ring-1 ring-emerald-200">
+            <i data-lucide="palette" class="h-5 w-5 text-emerald-700"></i>
+          </div>
+          <h3 class="mt-4 font-semibold">UI/UX Design</h3>
+          <p class="mt-2 text-sm text-zinc-600">
+            Creating user-friendly and visually appealing interfaces using modern design tools like Figma and Adobe XD.
+          </p>
+        </div>
+
+        <!-- Cloud -->
+        <div class="rounded-2xl bg-white/90 ring-1 ring-black/5 p-6 fade-up">
+          <div class="h-10 w-10 rounded-full grid place-content-center bg-orange-100 ring-1 ring-orange-200">
+            <i data-lucide="cloud" class="h-5 w-5 text-orange-700"></i>
+          </div>
+          <h3 class="mt-4 font-semibold">Cloud Platforms</h3>
+          <p class="mt-2 text-sm text-zinc-600">
+            Experience with cloud technologies and platforms including IBM Cloud for modern application deployment.
+          </p>
         </div>
       </div>
     </section>
 
-    <!-- Projects (filterable) -->
-    <section id="projects" class="py-16">
-      <div class="mb-8 flex items-center justify-between gap-4">
-        <h2 class="text-2xl sm:text-3xl font-semibold tracking-tight">Selected Work</h2>
-        <div class="flex items-center gap-2">
-          <i data-lucide="filter" class="h-5 w-5 opacity-70"></i>
-          <div id="filterButtons" class="flex gap-2 flex-wrap">
-            <!-- JS will insert category buttons -->
+    <!-- Services -->
+    <section id="services" class="py-16">
+      <h2 class="text-3xl font-bold text-center">Services</h2>
+      <div class="mx-auto mt-3 h-1 w-16 rounded bg-fuchsia-500"></div>
+      <p class="mt-3 text-center text-zinc-700">Transforming ideas into beautiful digital experiences</p>
+
+      <div class="mt-8 rounded-2xl bg-white/90 ring-1 ring-black/5 p-6 md:p-8 fade-up">
+        <div class="flex items-start gap-4">
+          <div class="h-12 w-12 rounded-full grid place-content-center bg-fuchsia-100 ring-1 ring-fuchsia-200 shrink-0">
+            <i data-lucide="palette" class="h-6 w-6 text-fuchsia-700"></i>
+          </div>
+          <div>
+            <h3 class="text-lg font-semibold">UI/UX Design</h3>
+            <p class="mt-1 text-zinc-700">
+              Creating user-friendly and visually appealing interfaces using tools like Figma and Adobe XD.
+              I focus on clean layouts, usability principles, and modern design trends to deliver exceptional
+              user experiences that engage and delight users.
+            </p>
+
+            <div class="mt-4 flex flex-wrap gap-2">
+              <span class="px-3 py-1 text-xs rounded-full bg-zinc-100 ring-1 ring-zinc-200">User Research</span>
+              <span class="px-3 py-1 text-xs rounded-full bg-zinc-100 ring-1 ring-zinc-200">Wireframing</span>
+              <span class="px-3 py-1 text-xs rounded-full bg-zinc-100 ring-1 ring-zinc-200">Prototyping</span>
+              <span class="px-3 py-1 text-xs rounded-full bg-zinc-100 ring-1 ring-zinc-200">Visual Design</span>
+              <span class="px-3 py-1 text-xs rounded-full bg-zinc-100 ring-1 ring-zinc-200">Figma</span>
+              <span class="px-3 py-1 text-xs rounded-full bg-zinc-100 ring-1 ring-zinc-200">Adobe XD</span>
+            </div>
+
+            <a href="#projects" class="mt-4 inline-flex items-center gap-2 text-fuchsia-700 font-medium">
+              Learn More <i data-lucide="arrow-right" class="h-4 w-4"></i>
+            </a>
           </div>
         </div>
       </div>
-      <div id="projectGrid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-        <!-- JS will insert filtered projects -->
-      </div>
     </section>
 
-    <!-- Experience -->
-    <section id="experience" class="py-16">
-      <h2 class="text-2xl sm:text-3xl font-semibold tracking-tight mb-6">Experience</h2>
-      <div class="grid gap-4">
-        <!-- JS insert -->
+    <!-- Projects -->
+    <section id="projects" class="py-16">
+      <h2 class="text-3xl font-bold text-center">Featured Projects</h2>
+      <div class="mx-auto mt-3 h-1 w-16 rounded bg-fuchsia-500"></div>
+      <p class="mt-3 text-center text-zinc-700">Showcasing my design and development work</p>
+
+      <div class="mt-8 grid grid-cols-1 lg:grid-cols-2 gap-6">
+        <!-- Project 1 -->
+        <article class="rounded-2xl overflow-hidden bg-white/90 ring-1 ring-black/5 fade-up">
+          <div class="relative h-56 bg-zinc-200">
+            <img class="h-full w-full object-cover"
+                 src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?q=80&w=1400&auto=format&fit=crop"
+                 alt="Nike Shoe"/>
+            <span class="absolute top-3 left-3 text-2xs bg-white/90 px-2 py-0.5 rounded">Price Text</span>
+            <span class="absolute top-6 left-3 text-sm bg-white/90 px-2 py-0.5 rounded">Product Title Text</span>
+          </div>
+          <div class="p-6">
+            <h3 class="font-semibold">Nike Shoe Design – Figma Prototype</h3>
+            <p class="mt-2 text-sm text-zinc-700">
+              A modern Nike shoe design prototype featuring the iconic Air Jordan silhouette with bold red and black
+              colorway. This design showcases contemporary product presentation with gradient backgrounds and clean
+              typography for athletic footwear marketing.
+            </p>
+            <div class="mt-4 flex flex-wrap gap-2">
+              <span class="tag">Figma</span><span class="tag">Product Design</span>
+              <span class="tag">UI Design</span><span class="tag">Brand Design</span><span class="tag">Prototyping</span>
+            </div>
+            <div class="mt-4 flex items-center justify-between">
+              <a class="inline-flex items-center gap-2 rounded-lg bg-fuchsia-600 text-white px-4 py-2"
+                 href="#" target="_blank">View Project <i data-lucide="arrow-up-right" class="h-4 w-4"></i></a>
+              <i data-lucide="figma" class="h-5 w-5 opacity-80"></i>
+            </div>
+          </div>
+        </article>
+
+        <!-- Project 2 -->
+        <article class="rounded-2xl overflow-hidden bg-white/90 ring-1 ring-black/5 fade-up">
+          <div class="relative h-56 bg-zinc-200">
+            <img class="h-full w-full object-cover"
+                 src="https://images.unsplash.com/photo-1499636136210-6f4ee915583e?q=80&w=1400&auto=format&fit=crop"
+                 alt="Donut Banner"/>
+          </div>
+          <div class="p-6">
+            <h3 class="font-semibold">Donut – Promo Banner</h3>
+            <p class="mt-2 text-sm text-zinc-700">
+              Colorful marketing hero for a donut brand using soft gradients, playful typography and CTA buttons.
+            </p>
+            <div class="mt-4 flex flex-wrap gap-2">
+              <span class="tag">Figma</span><span class="tag">UI Design</span><span class="tag">Marketing</span>
+            </div>
+            <div class="mt-4">
+              <a class="inline-flex items-center gap-2 rounded-lg bg-fuchsia-600 text-white px-4 py-2"
+                 href="#" target="_blank">View Project <i data-lucide="arrow-up-right" class="h-4 w-4"></i></a>
+            </div>
+          </div>
+        </article>
+
+        <!-- Project 3 -->
+        <article class="rounded-2xl overflow-hidden bg-white/90 ring-1 ring-black/5 lg:col-span-2 fade-up">
+          <div class="relative h-56 bg-zinc-200">
+            <img class="h-full w-full object-cover"
+                 src="https://images.unsplash.com/photo-1603791440384-56cd371ee9a7?q=80&w=1600&auto=format&fit=crop"
+                 alt="Apple Watch"/>
+          </div>
+          <div class="p-6">
+            <h3 class="font-semibold">Apple Watch – Product Landing Page</h3>
+            <p class="mt-2 text-sm text-zinc-700">
+              A sleek Apple Watch product landing page design featuring premium orange and beige color scheme.
+              The design showcases modern e-commerce principles with detailed product information,
+              specifications, and clean visual hierarchy for tech product marketing.
+            </p>
+            <div class="mt-4 flex flex-wrap gap-2">
+              <span class="tag">Figma</span><span class="tag">Web Design</span><span class="tag">Product Design</span>
+              <span class="tag">E-commerce</span><span class="tag">Landing Page</span>
+            </div>
+            <div class="mt-4">
+              <a class="inline-flex items-center gap-2 rounded-lg bg-fuchsia-600 text-white px-4 py-2"
+                 href="#" target="_blank">View Project <i data-lucide="arrow-up-right" class="h-4 w-4"></i></a>
+            </div>
+          </div>
+        </article>
+      </div>
+
+      <p class="mt-8 text-center text-zinc-700">More projects coming soon…</p>
+      <div class="mt-3 flex justify-center gap-3">
+        <span class="h-8 w-8 rounded-lg bg-white/90 ring-1 ring-black/5"></span>
+        <span class="h-8 w-8 rounded-lg bg-white/90 ring-1 ring-black/5"></span>
+        <span class="h-8 w-8 rounded-lg bg-white/90 ring-1 ring-black/5"></span>
       </div>
     </section>
 
     <!-- Contact -->
     <section id="contact" class="py-16">
-      <div class="rounded-2xl bg-zinc-900/60 ring-1 ring-white/10 p-6 md:p-8 fade-up">
-        <h2 class="text-2xl sm:text-3xl font-semibold tracking-tight">Let’s work together</h2>
-        <p class="mt-2 text-zinc-300/80 max-w-2xl">
-          Have a project or idea? I’m open to freelance and full-time roles. Drop a note and I’ll get back soon.
-        </p>
-        <div class="mt-6 grid sm:grid-cols-2 gap-4">
-          <a href="mailto:hello@example.com" class="rounded-2xl border border-white/10 p-4 hover:bg-zinc-900 flex items-center gap-3"><i data-lucide="mail" class="h-5 w-5"></i> hello@example.com</a>
-          <div class="rounded-2xl border border-white/10 p-4 flex items-center gap-3"><i data-lucide="phone" class="h-5 w-5"></i> +91 90000 00000</div>
-          <div class="rounded-2xl border border-white/10 p-4 flex items-center gap-3"><i data-lucide="map-pin" class="h-5 w-5"></i> Kolkata, India</div>
-          <a href="https://linkedin.com/" target="_blank" class="rounded-2xl border border-white/10 p-4 hover:bg-zinc-900 flex items-center gap-3"><i data-lucide="linkedin" class="h-5 w-5"></i> Connect on LinkedIn</a>
+      <h2 class="text-3xl font-bold text-center">Get In Touch</h2>
+      <div class="mx-auto mt-3 h-1 w-16 rounded bg-fuchsia-500"></div>
+      <p class="mt-3 text-center text-zinc-700">
+        Ready to start your next project? Let’s create something amazing together.
+      </p>
+
+      <div class="mt-8 grid md:grid-cols-2 gap-6 items-start">
+        <!-- Contact Info -->
+        <div class="grid gap-4">
+          <div class="rounded-2xl bg-white/90 ring-1 ring-black/5 p-4 flex items-center gap-3">
+            <div class="h-10 w-10 rounded-full grid place-content-center bg-fuchsia-100 ring-1 ring-fuchsia-200">
+              <i data-lucide="phone" class="h-5 w-5 text-fuchsia-700"></i>
+            </div>
+            <div>
+              <p class="text-sm text-zinc-500">Phone</p>
+              <p class="font-medium">9382696984</p>
+            </div>
+          </div>
+
+          <div class="rounded-2xl bg-white/90 ring-1 ring-black/5 p-4 flex items-center gap-3">
+            <div class="h-10 w-10 rounded-full grid place-content-center bg-emerald-100 ring-1 ring-emerald-200">
+              <i data-lucide="mail" class="h-5 w-5 text-emerald-700"></i>
+            </div>
+            <div>
+              <p class="text-sm text-zinc-500">Email</p>
+              <p class="font-medium">vivekchaurasia618@gmail.com</p>
+            </div>
+          </div>
+
+          <div class="rounded-2xl bg-white/90 ring-1 ring-black/5 p-4 flex items-center gap-3">
+            <div class="h-10 w-10 rounded-full grid place-content-center bg-indigo-100 ring-1 ring-indigo-200">
+              <i data-lucide="map-pin" class="h-5 w-5 text-indigo-700"></i>
+            </div>
+            <div>
+              <p class="text-sm text-zinc-500">Location</p>
+              <p class="font-medium">West Bengal, India</p>
+            </div>
+          </div>
+
+          <div class="rounded-2xl bg-gradient-to-br from-fuchsia-500 to-indigo-500 text-white p-5 shadow-lg">
+            <p class="text-lg font-semibold">Ready to Work Together?</p>
+            <p class="text-white/90 mt-1">Let’s discuss your project and bring your ideas to life.</p>
+            <a href="tel:+919382696984"
+               class="mt-3 inline-flex items-center gap-2 rounded-xl bg-white text-zinc-900 px-4 py-2 font-medium">
+              <i data-lucide="phone" class="h-4 w-4"></i> Call Now
+            </a>
+          </div>
         </div>
+
+        <!-- Form -->
+        <form class="rounded-2xl bg-white/90 ring-1 ring-black/5 p-6 md:p-8 grid gap-4">
+          <div>
+            <label class="text-sm text-zinc-600">Name</label>
+            <input class="mt-1 w-full rounded-xl border border-zinc-300 px-3 py-2 outline-none focus:ring-2 focus:ring-fuchsia-400" placeholder="Your Name"/>
+          </div>
+          <div>
+            <label class="text-sm text-zinc-600">Email</label>
+            <input type="email" class="mt-1 w-full rounded-xl border border-zinc-300 px-3 py-2 outline-none focus:ring-2 focus:ring-fuchsia-400" placeholder="your@email.com"/>
+          </div>
+          <div>
+            <label class="text-sm text-zinc-600">Message</label>
+            <textarea rows="5" class="mt-1 w-full rounded-xl border border-zinc-300 px-3 py-2 outline-none focus:ring-2 focus:ring-fuchsia-400" placeholder="Tell me about your project..."></textarea>
+          </div>
+          <button type="submit" class="inline-flex items-center justify-center gap-2 rounded-xl bg-fuchsia-600 text-white px-4 py-2 font-medium">
+            Send Message <i data-lucide="send" class="h-4 w-4"></i>
+          </button>
+        </form>
       </div>
     </section>
-
   </main>
 
   <!-- Footer -->
-  <footer class="py-12">
-    <div class="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
-      <div class="rounded-2xl bg-zinc-900/60 ring-1 ring-white/10 p-6 flex flex-col sm:flex-row items-center justify-between gap-4">
-        <p class="text-sm text-zinc-400">© <span id="year"></span> Vivek Chaurasia. Crafted with HTML, Tailwind, JS.</p>
-        <div class="flex items-center gap-4">
-          <a href="#home" class="inline-flex items-center gap-2 rounded-full border px-4 py-2">Back to top</a>
-          <a href="#projects" class="inline-flex items-center gap-2 rounded-full bg-white text-zinc-900 px-4 py-2 font-medium">View work</a>
+  <footer class="mt-12 border-t border-white/40 bg-white/50 backdrop-blur">
+    <div class="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8 py-10">
+      <div class="text-center">
+        <h3 class="text-lg font-semibold">Vivek Chaurasia</h3>
+        <p class="text-sm text-zinc-600">Computer Science Engineer & UI/UX Designer</p>
+        <div class="mt-3 flex items-center justify-center gap-4">
+          <a href="https://github.com/" target="_blank" class="opacity-80 hover:opacity-100"><i data-lucide="github"></i></a>
+          <a href="https://linkedin.com/" target="_blank" class="opacity-80 hover:opacity-100"><i data-lucide="linkedin"></i></a>
+          <a href="mailto:vivekchaurasia618@gmail.com" class="opacity-80 hover:opacity-100"><i data-lucide="mail"></i></a>
         </div>
+        <p class="mt-6 text-xs text-zinc-600">© <span id="year"></span> Made with <span class="text-fuchsia-700">♥</span> by Vivek Chaurasia</p>
       </div>
     </div>
   </footer>
 
-  <!-- Back to top button -->
-  <button id="backToTop" class="hidden fixed bottom-6 right-6 rounded-full bg-white text-zinc-900 p-3 shadow-xl ring-1 ring-black/5" aria-label="Back to top">↑</button>
+  <!-- Back to top -->
+  <button id="backToTop"
+          class="hidden fixed bottom-6 right-6 rounded-full bg-white text-zinc-900 p-3 shadow-xl ring-1 ring-black/5"
+          aria-label="Back to top">↑</button>
 
   <script>
-    // Lucide icons init
+    // Icons
     lucide.createIcons();
 
-    // Resume download
-    document.getElementById('resumeBtn').addEventListener('click', function(e) {
-      e.preventDefault();
-      const link = document.createElement('a');
-      link.href = 'resume.pdf';
-      link.download = 'Vivek_Chaurasia_Resume.pdf';
-      link.click();
-    });
+    // Fade up on view
+    const io = new IntersectionObserver((entries)=>{
+      entries.forEach(e=>{ if(e.isIntersecting) e.target.classList.add('show'); });
+    },{threshold:.12});
+    document.querySelectorAll('.fade-up').forEach(el=>io.observe(el));
 
-    // Back to top button
-    const backToTop = document.getElementById('backToTop');
-    window.addEventListener('scroll', () => {
-      if (window.scrollY > 480) backToTop.classList.remove('hidden');
-      else backToTop.classList.add('hidden');
-    });
-    backToTop.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
+    // Back to top
+    const btt=document.getElementById('backToTop');
+    window.addEventListener('scroll',()=> window.scrollY>480 ? btt.classList.remove('hidden') : btt.classList.add('hidden'));
+    btt.addEventListener('click',()=>window.scrollTo({top:0,behavior:'smooth'}));
 
-    // IntersectionObserver for fade-up animation
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) entry.target.classList.add('show');
-      });
-    }, { threshold: 0.1 });
-    document.querySelectorAll('.fade-up').forEach(el => observer.observe(el));
-
-    // Projects + Filter
-    const categories = ["All", "Product", "UI", "Web", "Mobile"];
-    const projects = [
-      { title: "SmartPay – UPI Wallet Revamp", blurb: "End-to-end UX case study improving onboarding and P2P flows.", tags: ["Product", "Mobile"], link: "#" },
-      { title: "CampusHub – Student Portal", blurb: "Responsive web app for events, results, and placements.", tags: ["Web", "UI"], link: "#" },
-      { title: "FitTrack – Habit Builder", blurb: "Gamified habit loops and streaks to drive retention.", tags: ["Product", "Mobile"], link: "#" },
-      { title: "QuikCart – Checkout UX", blurb: "Reduced cart abandonment with a 3-step funnel redesign.", tags: ["Web", "UI"], link: "#" }
-    ];
-    let currentFilter = "All";
-    const filterContainer = document.getElementById('filterButtons');
-    const grid = document.getElementById('projectGrid');
-
-    function renderProjects() {
-      grid.innerHTML = '';
-      projects
-        .filter(p => currentFilter === "All" || p.tags.includes(currentFilter))
-        .forEach(p => {
-          const card = document.createElement('a');
-          card.href = p.link;
-          card.target = "_blank";
-          card.className = "group rounded-2xl bg-zinc-900/60 ring-1 ring-white/10 hover:ring-indigo-400/40 p-5 backdrop-blur-sm shadow-sm hover:shadow-lg transition relative overflow-hidden fade-up";
-          card.innerHTML = `
-            <div class="absolute inset-0 opacity-0 group-hover:opacity-100 transition bg-gradient-to-tr from-indigo-500/10 via-fuchsia-500/10 to-cyan-500/10"></div>
-            <div class="flex items-start justify-between gap-4">
-              <h3 class="text-lg font-semibold leading-tight">${p.title}</h3>
-              <i data-lucide="external-link" class="h-4 w-4 shrink-0 opacity-70 group-hover:opacity-100"></i>
-            </div>
-            <p class="mt-2 text-sm text-zinc-300/80">${p.blurb}</p>
-            <div class="mt-4 flex flex-wrap gap-2">
-              ${p.tags.map(t => `<span class="text-xs rounded-full bg-zinc-800/80 ring-1 ring-white/10 px-2 py-1">${t}</span>`).join('')}
-            </div>
-          `;
-          grid.appendChild(card);
-        });
-      lucide.createIcons();
-    }
-
-    categories.forEach(cat => {
-      const btn = document.createElement('button');
-      btn.textContent = cat;
-      btn.className = `rounded-full border px-3 py-1 text-sm transition ${currentFilter === cat ? "bg-indigo-500/20 border-indigo-400/40" : "border-zinc-700 hover:bg-zinc-800/60"}`;
-      btn.addEventListener('click', () => {
-        currentFilter = cat;
-        document.querySelectorAll('#filterButtons button').forEach(b => b.classList.remove("bg-indigo-500/20","border-indigo-400/40"));
-        btn.classList.add("bg-indigo-500/20","border-indigo-400/40");
-        renderProjects();
-      });
-      filterContainer.appendChild(btn);
-    });
-
-    renderProjects();
-    document.getElementById('year').textContent = new Date().getFullYear();
+    // Year
+    document.getElementById('year').textContent=new Date().getFullYear();
   </script>
+
+  <!-- Small utility for project tags -->
+  <style>
+    .tag{font-size:.75rem;padding:.25rem .6rem;border-radius:9999px;background:#f4f4f5;border:1px solid #e4e4e7}
+  </style>
 </body>
 </html>
